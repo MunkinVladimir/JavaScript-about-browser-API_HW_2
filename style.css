@@ -1,0 +1,40 @@
+body {
+	font-family: Arial, sans-serif;
+}
+.slider-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.slider {
+	display: flex;
+	transition: transform 0.5s linear;
+}
+.slide {
+	flex: 0 0 100%;
+}
+.slide img {
+	width: 100%;
+	height: auto;
+}
+.navigation {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+.dot {
+	width: 10px;
+	height: 10px;
+	background-color: #888;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.dot.active {
+	background-color: #333;
+}
