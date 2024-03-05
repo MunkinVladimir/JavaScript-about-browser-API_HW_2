@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="zeroStyle.css" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Web Slider</title>
+		<title>Slider</title>
 	</head>
 	<body>
 		<div class="slider-container">
@@ -13,10 +13,45 @@
 				<div class="slide"><img src="image1.webp" alt="Image 1" /></div>
 				<div class="slide"><img src="image2.webp" alt="Image 2" /></div>
 				<div class="slide"><img src="image3.webp" alt="Image 3" /></div>
-				<div class="slide"><img src="image4.webp" alt="Image 4" /></div>
 			</div>
 		</div>
-		<div class="navigation" id="navigation"></div>
+
+		<div class="navigation" id="navigation">
+			<button class="backward">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="feather feather-arrow-left"
+				>
+					<line x1="19" y1="12" x2="5" y2="12"></line>
+					<polyline points="12 19 5 12 12 5"></polyline>
+				</svg>
+			</button>
+			<button class="forward">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="feather feather-arrow-right"
+				>
+					<line x1="5" y1="12" x2="19" y2="12"></line>
+					<polyline points="12 5 19 12 12 19"></polyline>
+				</svg>
+			</button>
+		</div>
 	</body>
 	<script src="script.js"></script>
 </html>

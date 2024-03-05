@@ -13,7 +13,8 @@ for (let i = 0; i < totalSlides; i++) {
 	dot.addEventListener('click', () => {
 		goToSlide(i);
 	});
-	navigation.appendChild(dot);
+
+	navigation.append(dot);
 }
 
 function goToSlide(slideIndex) {
@@ -36,6 +37,28 @@ function goToSlide(slideIndex) {
 	});
 }
 
+const forwardEl = document.querySelector('.forward');
+forwardEl.addEventListener('click', () => {
+	nextSlide();
+});
+
+window.addEventListener('keydown', function (e) {
+	if (e.key == 'ArrowRight') {
+		nextSlide();
+	}
+});
+
+const backwardEl = document.querySelector('.backward');
+backwardEl.addEventListener('click', () => {
+	prevSlide();
+});
+
+window.addEventListener('keydown', function (e) {
+	if (e.key == 'ArrowLeft') {
+		prevSlide();
+	}
+});
+
 function nextSlide() {
 	goToSlide(currentSlide + 1);
 }
@@ -44,4 +67,4 @@ function prevSlide() {
 	goToSlide(currentSlide - 1);
 }
 
-// setInterval(nextSlide, 2000);
+setInterval(nextSlide, 2000);

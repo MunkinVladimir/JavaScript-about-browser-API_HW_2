@@ -6,7 +6,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	overflow: hidden;
 	position: relative;
 }
 .slider {
@@ -19,13 +18,15 @@ body {
 .slide img {
 	width: 100%;
 	height: auto;
+	border: 2px solid #000000;
 }
 .navigation {
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
+	align-items: center;
 }
 .dot {
 	width: 10px;
@@ -37,4 +38,16 @@ body {
 }
 .dot.active {
 	background-color: #333;
+}
+
+.forward {
+	padding: 10px;
+	position: absolute;
+	left: 200px;
+}
+
+.backward {
+	padding: 10px;
+	position: absolute;
+	right: 200px;
 }
